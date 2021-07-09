@@ -9,15 +9,15 @@ class FruitDetails extends React.Component {
     console.log(fruits, id)
     
     return (
-      <>
-        <main>
+      <main>
+        <section>
             <FruitCard fruit={fruits.find((fruit) => fruit.id === parseInt(id))} details/>
-        </main>
+        </section>
         <aside>
           <h3>Outras Frutas</h3>
           <ListFruit fruits={fruits.filter((fruit) => fruit.id !== parseInt(id))}/>
         </aside>
-      </>
+      </main>
     )
   }
 }

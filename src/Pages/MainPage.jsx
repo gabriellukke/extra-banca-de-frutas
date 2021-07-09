@@ -5,10 +5,13 @@ class MainPage extends React.Component {
   render () {
     const { fruits } = this.props;
     return (
-      <div>
+      <div className="container">
+        <h1>Cesta de Frutas</h1>
+        <div>
         {fruits.map((fruit) => (
           <FruitCard fruit={fruit} />
         ))}
+        </div>
       </div>
     )
   }

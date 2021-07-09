@@ -9,7 +9,7 @@ class FruitCard extends React.Component {
 
     return (
       <>
-        {details ? <>
+        {details ? <div className="card">
           <div>
             <img src={photo} alt="fruit" />
           </div>
@@ -20,15 +20,17 @@ class FruitCard extends React.Component {
             <div>Carboidratos: {carbohydrates}</div>
             <div>Fibras: {fiber}</div>
           </div>
-        </> :
-          <Link to={`/details/${id}`}>
-            <div>
-              <img src={photo} alt="fruit" />
-            </div>
-            <div>
-              <span>{name}</span>
-            </div>
-          </Link>
+        </div> :
+          <div className="card">
+            <Link to={`/details/${id}`}>
+              <div>
+                <img src={photo} alt="fruit" />
+              </div>
+              <div>
+                <span>{name}</span>
+              </div>
+            </Link>
+          </div>
         }
       </>
     )
